@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Name:</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <strong>Image url:</strong>
+ 
   <%= image_tag @product.image_url, :class => 'show-product-image' %>
 </p>
 
@@ -30,5 +30,5 @@
   <%= @product.headline %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
+
 <%= link_to 'Back', products_path %>
