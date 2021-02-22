@@ -1,6 +1,20 @@
 
  @import "bootstrap";
 
+
+.table-product-image {
+  width: 100px;
+  height: 100px;
+
+}
+
+.show-product-image {
+  width: 500px;
+  height: 500px;
+
+}
+
+
 .carousel-image {
   position: absolute;
   width: 70px;
@@ -102,17 +116,6 @@ body {
 }
 
 
-.table-product-image {
-	width: 100px;
-	height: 100px;
-
-}
-
-.show-product-image {
-	width: 750px;
-	height: 750px;
-
-}
 
 .home {
 	text-align: center;

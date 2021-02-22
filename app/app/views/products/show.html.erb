@@ -1,34 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+          <h1><%= @product.headline %> </h1>
+          <div class="card shadow-sm">
+            <%= image_tag @product.image_url, :class => 'show-product-image' %>
+          
+            <div class="card-body">
+              <p class="card-text"><%= @product.name %>   <%= @product.category %></p>
+
+              <div class="d-flex justify-content-between align-items-center">
+                 <div class="row">
+
+                 <p> <%= @product.description %> </p>
+               </div>
+                <div class="btn-group">
+
+                  <%= link_to "Purchase", @product, :class =>"btn btn-sm btn-outline-secondary" %>
+                </div>
+                <small class="text-muted"> $<%= @product.price %></small>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
 
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
- 
-  <%= image_tag @product.image_url, :class => 'show-product-image' %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Headline:</strong>
-  <%= @product.headline %>
-</p>
 
 
-<%= link_to 'Back', products_path %>
