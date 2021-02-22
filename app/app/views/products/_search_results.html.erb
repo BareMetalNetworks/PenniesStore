@@ -1,18 +1,11 @@
 
+<% if params[:search] %>
 
-
-
-
-<%= render partial: 'search_results' %>
-
-      </div>
-      </div>
-    </div>
 
  <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">All Products</h1>
+        <h1 class="fw-light">Products matching <%= params[:search] %> </h1>
       
       </div>
     </div>
@@ -25,11 +18,7 @@
 
 
 
-
-
-<% Product.order(Arel.sql('RANDOM()')).each do |product| %>
-
-
+<% @products.each do |product| %>
   <div class="col">
           <div class="card shadow-sm">
             <%= image_tag product.image_url %>
@@ -47,24 +36,6 @@
           </div>
         </div>
 
-
-
 <% end %>
 
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-<br>
-
+<% end %>

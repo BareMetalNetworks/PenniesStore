@@ -11,7 +11,7 @@ products = Product.create([
 {
 	name: "Wonderful Topiary",
 	price: 135.99,
-	kind: "tree",
+	category: "tree",
 	description: "Lovely pruning of a tree",
 	image_url: "ugly_topiary.jpg",
 	headline: "Check out this awesome topiary",
@@ -20,7 +20,7 @@ products = Product.create([
 {
 	name: "Lovely Wreath",
 	price: 10.99,
-	kind: "wreath",
+	category: "wreath",
 	description: "Wonderful Christmas arrangement",
 	image_url: "ugly_wreath.jpg",
 	headline: "What a lovely Xmas present"
@@ -29,7 +29,7 @@ products = Product.create([
 
 	name: "Beautiful Couch",
 	price: 1099.99,
-	kind: "couch",
+	category: "couch",
 	description: "A must have item for your home",
 	image_url: "ugly_couch.jpg"
 
