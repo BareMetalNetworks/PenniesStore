@@ -2,11 +2,16 @@
 
 
 
-  <section class="py-5 text-center container">
+
+
+<% if params[:search] %>
+
+
+ <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Our Products</h1>
-        <p class="lead text-muted">Currently available products</p>
+        <h1 class="fw-light">Products matching <%= params[:search] %> </h1>
+      
       </div>
     </div>
   </section>
@@ -15,6 +20,51 @@
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+
+<% @products.each do |product| %>
+  <div class="col">
+          <div class="card shadow-sm">
+            <%= image_tag product.image_url %>
+
+            <div class="card-body">
+              <p class="card-text"><%= product.name %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+
+                  <%= link_to "View Details", product, :class =>"btn btn-sm btn-outline-secondary" %>
+                </div>
+                <small class="text-muted"> $<%= product.price %></small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<% end %>
+
+<% end %>
+
+      </div>
+      </div>
+    </div>
+
+ <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">All Products</h1>
+      
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+
 
 
 <% Product.order(Arel.sql('RANDOM()')).each do |product| %>

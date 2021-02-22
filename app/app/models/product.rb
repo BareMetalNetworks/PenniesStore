@@ -13,4 +13,8 @@ class Product < ApplicationRecord
     	products
   end
 
+
+  def self.randomly 
+    Product.order(Arel.sql('RANDOM()'))
+  end
 end
