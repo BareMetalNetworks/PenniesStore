@@ -1,14 +1,14 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show ]
 
-  # GET /products or /products.json
   def index
-    @products = Product.all
+    @products = Product.search(params[:search])
   end
 
-  # GET /products/1 or /products/1.json
   def show
   end
+
+
 
 
   private
@@ -17,8 +17,7 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-   # def product_params
-    #  params.require(:product).permit(:name, :kind, :description, :image_url, :price, :headline)
-    #end
+    def product_params
+      params.require(:product).permit(:search)
+    end
 end
