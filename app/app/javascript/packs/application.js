@@ -7,11 +7,15 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+require("jquery")
+
 import index from './index.js'
 
 //= require jquery3
+//= require jquery_ujs
 //= require popper
 //= bootstrap-sprockets
+//= require tree .
 
 
 Rails.start()
@@ -19,3 +23,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 
+
+$(document).ready(function() {
+	alert('foobar');
+});
