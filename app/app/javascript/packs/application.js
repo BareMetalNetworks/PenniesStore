@@ -22,8 +22,12 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-
-
-$(document).ready(function() {
-	alert('foobar');
+$(document).ready(function(){
+$('.carousel').carousel({
+	interval: 2000
+})
 });
+
+// $(document).ready(function() {
+// 	alert('foobar');
+// });
