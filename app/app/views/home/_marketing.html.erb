@@ -1,6 +1,6 @@
   <div class="container marketing">
 
-<div class="row">
+<div class="row mt-5">
     <!-- Three columns of text below the carousel -->
     <% Product.order(Arel.sql('RANDOM()')).limit(3).each do |product| %>
     
