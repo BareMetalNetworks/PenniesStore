@@ -1,0 +1,38 @@
+
+
+ <nav class="navbar navbar-toggleable-sm mr-5 navbar-light sticky-top navbar-expand-sm ">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="navbar-brand" href="#"><i class="fas text-dark fa-spa fa-2x"></i> Twin Florals</a>
+      <ul class="navbar-nav mx-5">
+
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="#about-us">About Us</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="#products">Roasts</a>
+        </li>
+ 
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+
+        <%= form_tag products_url, :method => 'get', :class => "d-flex ml-5" do %>
+    
+          <%= text_field_tag :search, params[:search], :class => "form-control me-2" %>
+          <%= submit_tag("Search", :class => "btn btn-outline-warning", :name => nil) %>
+          <% end %>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>

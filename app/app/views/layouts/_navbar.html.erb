@@ -1,32 +1,31 @@
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><i class="fas fa-spa"></i> Twin Florals</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
- 
-          <li class="nav-item">
-            <a class="nav-link" href="/products">Products</a>
-          </li>
-     
-          <li class="nav-item">
-            <a class="nav-link" href="/about/index">About</a>
-          </li>
-         <li class="nav-item">
-            <a class="nav-link" href="/contact/index">Contact</a>
-          </li>
+    <header>
+<!-- ======================================Navigation Bar================================================= -->
+        <nav class="navbar navbar-expand-lg navStyle fixed-top">
+             <a class="navbar-brand" href="#"><i class="fas text-white fa-spa fa-2x"></i> Twin Florals</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+                <span><i class="fas fa-align-right iconStyle"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto navList">
+                    <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>HOME<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i>Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="portfolio.html" class="nav-link"><i class="fas fa-briefcase"></i>Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><i class="fas fa-phone"></i>Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link"><i class="fas fa-users"></i>About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+      </header>
 
 
-        </ul>
 
-        <%= form_tag products_url, :method => 'get', :class => "d-flex" do %>
-    
-          <%= text_field_tag :search, params[:search], :class => "form-control me-2" %>
-          <%= submit_tag("Search", :class => "btn btn-outline-warning", :name => nil) %>
-          <% end %>
-    
-      </div>
-    </div>
-  </nav>
+  
